@@ -3019,7 +3019,10 @@ def show_books_page():
 
     def render_programme_view():
         program_books = st.session_state.app.books.get('program_books', {})
-        # Initialize selected_program in session state if it doesn't exist
+        
+        # Initialize session state variables if they don't exist
+        if 'role' not in st.session_state:
+            st.session_state.role = None
         if 'selected_program' not in st.session_state:
             st.session_state.selected_program = None
             
