@@ -2897,7 +2897,8 @@ def show_books_page():
             ]
 
         subject_filter = st.session_state.get('selected_subject')
-        if subject_filter and subject_filter != 'All Subjects':
+        # Only apply subject filter if not admin or if a specific subject is selected
+        if subject_filter and (st.session_state.get('role') != 'admin' or subject_filter != 'All Subjects'):
             book_list = [
                 b for b in book_list if (_ensure_subject_tag(b) or '').lower() == subject_filter.lower()
             ]
