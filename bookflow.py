@@ -391,17 +391,27 @@ st.markdown("""
     }
 
     /* Streamlit Dialogs */
-    [data-testid="stDialog"] [data-baseweb="modal"] {
-        background: rgba(10, 10, 10, 0.9) !important;
+    [data-testid="stDialog"] [data-baseweb="modal-backdrop"] {
+        background: rgba(10, 10, 10, 0.85) !important;
         backdrop-filter: blur(6px);
     }
 
-    [data-testid="stDialog"] [data-baseweb="modal"] > div {
+    [data-testid="stDialog"] [data-baseweb="modal"],
+    [data-testid="stDialog"] [data-baseweb="modal"] > div,
+    [data-testid="stDialog"] [data-baseweb="modal-container"],
+    [data-testid="stDialog"] [data-baseweb="modal-header"],
+    [data-testid="stDialog"] [data-baseweb="modal-body"],
+    [data-testid="stDialog"] [data-baseweb="modal-footer"],
+    [data-testid="stDialog"] div[role="dialog"] {
         background: #141414 !important;
-        border: 1px solid #2a2a2a !important;
         border-radius: 18px !important;
+        border: 1px solid #2a2a2a !important;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
         color: #f4f4f4 !important;
+    }
+
+    [data-testid="stDialog"] [data-baseweb="modal-body"],
+    [data-testid="stDialog"] [data-baseweb="modal-footer"] {
         padding: 1.75rem !important;
     }
 
@@ -410,6 +420,11 @@ st.markdown("""
     }
 
     [data-testid="stDialog"] [data-testid="stModalCloseButton"] button {
+        color: #f4f4f4 !important;
+    }
+
+    [data-testid="stDialog"] [data-baseweb="modal-close"] button,
+    [data-testid="stDialog"] [data-baseweb="modal-close"] svg {
         color: #f4f4f4 !important;
     }
 
