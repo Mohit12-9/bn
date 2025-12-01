@@ -201,7 +201,15 @@ st.markdown("""
 
     .stSelectbox div[data-baseweb="menu"],
     .stMultiselect div[data-baseweb="menu"],
-    .stSelectbox div[data-baseweb="popover"] {
+    .stSelectbox div[data-baseweb="popover"],
+    .stSelectbox div[data-baseweb="popover"] div[role="listbox"],
+    .stMultiselect div[data-baseweb="popover"],
+    .stMultiselect div[data-baseweb="popover"] div[role="listbox"],
+    .stSelectbox div[data-baseweb="popover"] ul,
+    .stMultiselect div[data-baseweb="popover"] ul,
+    div[data-baseweb="popover"] ul[role="listbox"],
+    div[data-baseweb="menu"] ul,
+    div[data-baseweb="menu"] ul > li {
         background: #101010 !important;
         border: 1px solid rgba(108, 3, 69, 0.4) !important;
         border-radius: 10px !important;
@@ -211,7 +219,9 @@ st.markdown("""
     .stSelectbox div[data-baseweb="menu"] li[role="option"],
     .stMultiselect div[data-baseweb="menu"] li[role="option"],
     .stSelectbox div[data-baseweb="popover"] [role="option"],
-    .stMultiselect div[data-baseweb="popover"] [role="option"] {
+    .stMultiselect div[data-baseweb="popover"] [role="option"],
+    div[data-baseweb="menu"] li[role="option"],
+    div[data-baseweb="popover"] [role="option"] {
         background: transparent !important;
         color: #f5f5f5 !important;
     }
@@ -221,7 +231,11 @@ st.markdown("""
     .stSelectbox div[data-baseweb="menu"] li[role="option"]:hover,
     .stMultiselect div[data-baseweb="menu"] li[role="option"]:hover,
     .stSelectbox div[data-baseweb="popover"] [role="option"][aria-selected="true"],
-    .stMultiselect div[data-baseweb="popover"] [role="option"][aria-selected="true"] {
+    .stMultiselect div[data-baseweb="popover"] [role="option"][aria-selected="true"],
+    div[data-baseweb="menu"] li[role="option"]:hover,
+    div[data-baseweb="menu"] li[role="option"][aria-selected="true"],
+    div[data-baseweb="popover"] [role="option"]:hover,
+    div[data-baseweb="popover"] [role="option"][aria-selected="true"] {
         background: rgba(108, 3, 69, 0.35) !important;
         color: #ffffff !important;
     }
