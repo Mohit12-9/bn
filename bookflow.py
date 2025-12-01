@@ -156,6 +156,34 @@ st.markdown("""
         box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.35);
     }
 
+    /* Password toggle / suffix */
+    .stTextInput div[data-baseweb="input"] {
+        background: #2a2a2a !important;
+        border: 1px solid #444444 !important;
+        border-radius: 8px !important;
+        color: #ffffff !important;
+        overflow: hidden;
+    }
+
+    .stTextInput div[data-baseweb="input"]:focus-within {
+        border-color: #6C0345 !important;
+        box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.25) !important;
+    }
+
+    .stTextInput div[data-baseweb="input"] button,
+    .stTextInput div[data-baseweb="input"] [role="button"] {
+        background: #2a2a2a !important;
+        border-left: 1px solid #444444 !important;
+        color: #F7C566 !important;
+        transition: background 0.2s ease;
+    }
+
+    .stTextInput div[data-baseweb="input"] button:hover,
+    .stTextInput div[data-baseweb="input"] [role="button"]:hover {
+        background: #3a1a28 !important;
+        color: #ffffff !important;
+    }
+
     /* Expander styling */
     [data-testid="stExpander"] > details {
         background: #1b1b1b !important;
