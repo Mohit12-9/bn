@@ -133,21 +133,63 @@ st.markdown("""
     }
     
     /* Input Fields */
-    .stTextInput>div>div>input, .stSelectbox>div>div>select {
+    .stTextInput>div>div>input,
+    .stNumberInput input,
+    .stTextArea textarea,
+    .stDateInput>div>div>input,
+    .stTimeInput>div>div>input {
         border-radius: 8px;
         border: 1px solid #444444;
-        padding: 0.5rem;
-        transition: border-color 0.3s ease;
+        padding: 0.55rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
         background: #2a2a2a !important;
         color: #ffffff !important;
         font-size: 0.9rem;
     }
-    
-    .stTextInput>div>div>input:focus {
+
+    .stTextInput>div>div>input:focus,
+    .stNumberInput input:focus,
+    .stTextArea textarea:focus,
+    .stDateInput>div>div>input:focus,
+    .stTimeInput>div>div>input:focus {
         border-color: #6C0345;
-        box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.3);
+        box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.35);
     }
-    
+
+    /* Selectbox / Multiselect */
+    .stSelectbox div[data-baseweb="select"],
+    .stMultiselect div[data-baseweb="select"] {
+        background: transparent !important;
+    }
+
+    .stSelectbox div[data-baseweb="select"] div[role="combobox"],
+    .stMultiselect div[data-baseweb="select"] div[role="combobox"] {
+        background: #2a2a2a !important;
+        border: 1px solid #444444 !important;
+        border-radius: 8px !important;
+        min-height: 2.5rem;
+        padding: 0 0.4rem !important;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stSelectbox div[data-baseweb="select"] div[role="combobox"]:hover,
+    .stMultiselect div[data-baseweb="select"] div[role="combobox"]:hover,
+    .stSelectbox div[data-baseweb="select"] div[role="combobox"]:focus,
+    .stMultiselect div[data-baseweb="select"] div[role="combobox"]:focus {
+        border-color: #6C0345 !important;
+        box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.2);
+    }
+
+    .stSelectbox div[data-baseweb="select"] div[role="combobox"] > div,
+    .stMultiselect div[data-baseweb="select"] div[role="combobox"] > div {
+        color: #ffffff !important;
+    }
+
+    .stSelectbox div[data-baseweb="select"] svg,
+    .stMultiselect div[data-baseweb="select"] svg {
+        color: #F7C566 !important;
+    }
+
     /* Labels */
     .stTextInput>label, .stSelectbox>label, .stRadio>label {
         color: #ffffff !important;
@@ -325,6 +367,58 @@ st.markdown("""
     /* Column containers */
     [data-testid="column"] {
         background: transparent;
+    }
+
+    /* Streamlit Dialogs */
+    [data-testid="stDialog"] > div[role="dialog"] {
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 16px !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+        color: #f4f4f4 !important;
+        padding: 1.5rem !important;
+    }
+
+    [data-testid="stDialog"] > div[role="dialog"] * {
+        color: #f4f4f4 !important;
+    }
+
+    [data-testid="stDialog"] [data-testid="stModalCloseButton"] button {
+        color: #f4f4f4 !important;
+    }
+
+    /* Alerts */
+    div[data-testid="stAlert"] {
+        background: rgba(22, 22, 22, 0.98) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-left: 4px solid #6C0345 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45) !important;
+        padding: 1rem 1.2rem !important;
+    }
+
+    div[data-testid="stAlert"] p,
+    div[data-testid="stAlert"] span,
+    div[data-testid="stAlert"] strong {
+        color: #f0f0f0 !important;
+    }
+
+    div[data-testid="stAlert"] svg {
+        color: #F7C566 !important;
+        stroke: #F7C566 !important;
+    }
+
+    /* Forms */
+    form[data-testid="stForm"] {
+        background: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        border-radius: 12px !important;
+        padding: 0.8rem !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    form[data-testid="stForm"] * {
+        color: #e5e5e5 !important;
     }
     
     /* ===== MOBILE RESPONSIVE ===== */
