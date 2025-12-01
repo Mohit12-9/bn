@@ -162,32 +162,53 @@ st.markdown("""
         background: transparent !important;
     }
 
-    .stSelectbox div[data-baseweb="select"] div[role="combobox"],
-    .stMultiselect div[data-baseweb="select"] div[role="combobox"] {
+    .stSelectbox div[data-baseweb="select"] > div,
+    .stMultiselect div[data-baseweb="select"] > div {
         background: #2a2a2a !important;
         border: 1px solid #444444 !important;
         border-radius: 8px !important;
         min-height: 2.5rem;
-        padding: 0 0.4rem !important;
+        padding: 0.1rem 0.4rem !important;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .stSelectbox div[data-baseweb="select"] div[role="combobox"]:hover,
-    .stMultiselect div[data-baseweb="select"] div[role="combobox"]:hover,
-    .stSelectbox div[data-baseweb="select"] div[role="combobox"]:focus,
-    .stMultiselect div[data-baseweb="select"] div[role="combobox"]:focus {
+    .stSelectbox div[data-baseweb="select"] > div:hover,
+    .stMultiselect div[data-baseweb="select"] > div:hover,
+    .stSelectbox div[data-baseweb="select"] > div:focus,
+    .stMultiselect div[data-baseweb="select"] > div:focus {
         border-color: #6C0345 !important;
         box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.2);
     }
 
-    .stSelectbox div[data-baseweb="select"] div[role="combobox"] > div,
-    .stMultiselect div[data-baseweb="select"] div[role="combobox"] > div {
+    .stSelectbox div[data-baseweb="select"] [role="combobox"],
+    .stMultiselect div[data-baseweb="select"] [role="combobox"] {
+        background: transparent !important;
+        border: none !important;
+        color: #ffffff !important;
+    }
+
+    .stSelectbox div[data-baseweb="select"] [role="combobox"] > div,
+    .stMultiselect div[data-baseweb="select"] [role="combobox"] > div,
+    .stSelectbox div[data-baseweb="select"] input,
+    .stMultiselect div[data-baseweb="select"] input {
         color: #ffffff !important;
     }
 
     .stSelectbox div[data-baseweb="select"] svg,
     .stMultiselect div[data-baseweb="select"] svg {
         color: #F7C566 !important;
+    }
+
+    .stSelectbox div[data-baseweb="popover"] [role="option"],
+    .stMultiselect div[data-baseweb="popover"] [role="option"] {
+        background: #1e1e1e !important;
+        color: #f5f5f5 !important;
+    }
+
+    .stSelectbox div[data-baseweb="popover"] [role="option"][aria-selected="true"],
+    .stMultiselect div[data-baseweb="popover"] [role="option"][aria-selected="true"] {
+        background: #6C0345 !important;
+        color: #ffffff !important;
     }
 
     /* Labels */
@@ -370,16 +391,21 @@ st.markdown("""
     }
 
     /* Streamlit Dialogs */
-    [data-testid="stDialog"] > div[role="dialog"] {
-        background: #141414 !important;
-        border: 1px solid #2a2a2a !important;
-        border-radius: 16px !important;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
-        color: #f4f4f4 !important;
-        padding: 1.5rem !important;
+    [data-testid="stDialog"] [data-baseweb="modal"] {
+        background: rgba(10, 10, 10, 0.9) !important;
+        backdrop-filter: blur(6px);
     }
 
-    [data-testid="stDialog"] > div[role="dialog"] * {
+    [data-testid="stDialog"] [data-baseweb="modal"] > div {
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 18px !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
+        color: #f4f4f4 !important;
+        padding: 1.75rem !important;
+    }
+
+    [data-testid="stDialog"] [role="dialog"] * {
         color: #f4f4f4 !important;
     }
 
