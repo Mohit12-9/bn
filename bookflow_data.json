@@ -76,7 +76,7 @@
                     "pdf_url": "https://assets.anaconda.com/production/uploads/Machine-Learning-Yearning-Andrew-Ng.pdf?programme=BTECHART",
                     "original_title": "Machine Learning Yearning",
                     "title_signature": "BTECHART:AI001",
-                    "available": 6,
+                    "available": 0,
                     "programme": "B.Tech (Artificial Intelligence)",
                     "program_category": "Artificial Intelligence",
                     "catalog_type": "program",
@@ -18854,4 +18854,5 @@
         }
     ],
     "reservations": []
+
 }
