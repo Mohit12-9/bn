@@ -199,6 +199,33 @@ st.markdown("""
         color: #F7C566 !important;
     }
 
+    .stSelectbox div[data-baseweb="menu"],
+    .stMultiselect div[data-baseweb="menu"],
+    .stSelectbox div[data-baseweb="popover"] {
+        background: #101010 !important;
+        border: 1px solid rgba(108, 3, 69, 0.4) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45) !important;
+    }
+
+    .stSelectbox div[data-baseweb="menu"] li[role="option"],
+    .stMultiselect div[data-baseweb="menu"] li[role="option"],
+    .stSelectbox div[data-baseweb="popover"] [role="option"],
+    .stMultiselect div[data-baseweb="popover"] [role="option"] {
+        background: transparent !important;
+        color: #f5f5f5 !important;
+    }
+
+    .stSelectbox div[data-baseweb="menu"] li[role="option"][aria-selected="true"],
+    .stMultiselect div[data-baseweb="menu"] li[role="option"][aria-selected="true"],
+    .stSelectbox div[data-baseweb="menu"] li[role="option"]:hover,
+    .stMultiselect div[data-baseweb="menu"] li[role="option"]:hover,
+    .stSelectbox div[data-baseweb="popover"] [role="option"][aria-selected="true"],
+    .stMultiselect div[data-baseweb="popover"] [role="option"][aria-selected="true"] {
+        background: rgba(108, 3, 69, 0.35) !important;
+        color: #ffffff !important;
+    }
+
     .stSelectbox div[data-baseweb="popover"] [role="option"],
     .stMultiselect div[data-baseweb="popover"] [role="option"] {
         background: #1e1e1e !important;
@@ -209,6 +236,39 @@ st.markdown("""
     .stMultiselect div[data-baseweb="popover"] [role="option"][aria-selected="true"] {
         background: #6C0345 !important;
         color: #ffffff !important;
+    }
+
+    /* Download / Link Buttons */
+    [data-testid="stDownloadButton"] button,
+    [data-testid="stDownloadButton"] a,
+    [data-testid="stLinkButton"] button,
+    [data-testid="stLinkButton"] a {
+        background: linear-gradient(135deg, #232323 0%, #111111 100%) !important;
+        border: 1px solid rgba(108, 3, 69, 0.45) !important;
+        color: #f0f0f0 !important;
+        border-radius: 10px !important;
+        padding: 0.6rem 1.1rem !important;
+        font-weight: 600 !important;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 18px rgba(0, 0, 0, 0.35) !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    [data-testid="stDownloadButton"] button:disabled,
+    [data-testid="stDownloadButton"] a:disabled,
+    [data-testid="stLinkButton"] button:disabled,
+    [data-testid="stLinkButton"] a:disabled {
+        background: linear-gradient(135deg, #1b1b1b 0%, #0f0f0f 100%) !important;
+        color: rgba(255, 255, 255, 0.4) !important;
+        border-color: rgba(108, 3, 69, 0.25) !important;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+    }
+
+    [data-testid="stDownloadButton"] button:not(:disabled):hover,
+    [data-testid="stDownloadButton"] a:not(:disabled):hover,
+    [data-testid="stLinkButton"] button:hover,
+    [data-testid="stLinkButton"] a:hover {
+        transform: translateY(-2px);
+        box-shadow: inset 0 0 0 1px rgba(247, 197, 102, 0.25), 0 12px 24px rgba(108, 3, 69, 0.35) !important;
     }
 
     /* Labels */
