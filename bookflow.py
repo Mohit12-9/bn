@@ -221,37 +221,38 @@ st.markdown("""
 
     body div[role="listbox"],
     body ul[role="listbox"],
-    body li[role="option"] {
-        background: #101010 !important;
+    body li[role="option"],
+    body div[data-baseweb="popover"],
+    body div[data-baseweb="menu"],
+    body div[data-baseweb="popover"] *,
+    body div[data-baseweb="menu"] * {
+        background-color: #0f0f0f !important;
         color: #f5f5f5 !important;
+    }
+
+    body div[data-baseweb="popover"],
+    body div[data-baseweb="menu"],
+    body div[role="listbox"],
+    body ul[role="listbox"] {
         border-radius: 10px !important;
+        border: 1px solid rgba(108, 3, 69, 0.45) !important;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.55) !important;
     }
 
-    *[data-baseweb="menu"] [role="option"],
-    *[data-baseweb="popover"] [role="option"],
-    *[data-baseweb="menu"] li,
-    *[data-baseweb="popover"] li {
-        background: transparent !important;
-        color: #f5f5f5 !important;
+    body li[role="option"],
+    body li[role="option"] > div,
+    body div[role="listbox"] li,
+    body ul[role="listbox"] li {
+        padding: 0.55rem 0.8rem !important;
     }
 
-    *[data-baseweb="menu"] [role="option"][aria-selected="true"],
-    *[data-baseweb="menu"] [role="option"]:hover,
-    *[data-baseweb="popover"] [role="option"][aria-selected="true"],
-    *[data-baseweb="popover"] [role="option"]:hover {
-        background: rgba(108, 3, 69, 0.35) !important;
-        color: #ffffff !important;
-    }
-
-    .stSelectbox div[data-baseweb="popover"] [role="option"],
-    .stMultiselect div[data-baseweb="popover"] [role="option"] {
-        background: #1e1e1e !important;
-        color: #f5f5f5 !important;
-    }
-
-    .stSelectbox div[data-baseweb="popover"] [role="option"][aria-selected="true"],
-    .stMultiselect div[data-baseweb="popover"] [role="option"][aria-selected="true"] {
-        background: #6C0345 !important;
+    body li[role="option"][aria-selected="true"],
+    body li[role="option"]:hover,
+    body div[role="listbox"] li[aria-selected="true"],
+    body ul[role="listbox"] li[aria-selected="true"],
+    body div[role="listbox"] li:hover,
+    body ul[role="listbox"] li:hover {
+        background: rgba(108, 3, 69, 0.45) !important;
         color: #ffffff !important;
     }
 
