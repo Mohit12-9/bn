@@ -219,6 +219,14 @@ st.markdown("""
         border-radius: 10px !important;
     }
 
+    body div[role="listbox"],
+    body ul[role="listbox"],
+    body li[role="option"] {
+        background: #101010 !important;
+        color: #f5f5f5 !important;
+        border-radius: 10px !important;
+    }
+
     *[data-baseweb="menu"] [role="option"],
     *[data-baseweb="popover"] [role="option"],
     *[data-baseweb="menu"] li,
