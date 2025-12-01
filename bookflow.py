@@ -156,6 +156,26 @@ st.markdown("""
         box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.35);
     }
 
+    /* Expander styling */
+    [data-testid="stExpander"] > details {
+        background: #1b1b1b !important;
+        border: 1px solid #333333 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+        overflow: hidden;
+    }
+
+    [data-testid="stExpander"] > details > summary {
+        background: linear-gradient(135deg, #2a2a2a 0%, #111111 100%) !important;
+        color: #f5f5f5 !important;
+        border-bottom: 1px solid #333333 !important;
+    }
+
+    [data-testid="stExpander"] > details > div[role="group"] {
+        background: #111111 !important;
+        padding: 1rem !important;
+    }
+
     /* Selectbox / Multiselect */
     .stSelectbox div[data-baseweb="select"],
     .stMultiselect div[data-baseweb="select"] {
@@ -197,6 +217,35 @@ st.markdown("""
     .stSelectbox div[data-baseweb="select"] svg,
     .stMultiselect div[data-baseweb="select"] svg {
         color: #F7C566 !important;
+    }
+
+    /* Global BaseWeb select control */
+    [data-baseweb="select"],
+    [data-baseweb="select"] > div,
+    [data-baseweb="select"] div[role="combobox"],
+    [data-baseweb="select"] div[aria-expanded],
+    [data-baseweb="select"] div[aria-haspopup="listbox"],
+    [data-baseweb="select"] div[role="presentation"],
+    [data-baseweb="select"] input {
+        background: #1b1b1b !important;
+        color: #ffffff !important;
+        border-radius: 10px !important;
+        border: 1px solid #444444 !important;
+    }
+
+    [data-baseweb="select"] div[role="combobox"] {
+        min-height: 2.5rem !important;
+        padding: 0.2rem 0.6rem !important;
+    }
+
+    [data-baseweb="select"] div[role="combobox"]:focus,
+    [data-baseweb="select"] div[role="combobox"]:hover {
+        border-color: #6C0345 !important;
+        box-shadow: 0 0 0 2px rgba(108, 3, 69, 0.25) !important;
+    }
+
+    [data-baseweb="select"] input {
+        padding: 0 !important;
     }
 
     .stSelectbox *[data-baseweb="menu"],
@@ -254,6 +303,15 @@ st.markdown("""
     body ul[role="listbox"] li:hover {
         background: rgba(108, 3, 69, 0.45) !important;
         color: #ffffff !important;
+    }
+
+    /* Input placeholder visibility */
+    .stTextInput input::placeholder,
+    .stTextArea textarea::placeholder,
+    .stDateInput input::placeholder,
+    .stTimeInput input::placeholder,
+    [data-baseweb="select"] input::placeholder {
+        color: rgba(255, 255, 255, 0.55) !important;
     }
 
     /* Download / Link Buttons */
