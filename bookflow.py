@@ -199,43 +199,38 @@ st.markdown("""
         color: #F7C566 !important;
     }
 
-    .stSelectbox div[data-baseweb="menu"],
-    .stMultiselect div[data-baseweb="menu"],
-    .stSelectbox div[data-baseweb="popover"],
-    .stSelectbox div[data-baseweb="popover"] div[role="listbox"],
-    .stMultiselect div[data-baseweb="popover"],
-    .stMultiselect div[data-baseweb="popover"] div[role="listbox"],
-    .stSelectbox div[data-baseweb="popover"] ul,
-    .stMultiselect div[data-baseweb="popover"] ul,
-    div[data-baseweb="popover"] ul[role="listbox"],
-    div[data-baseweb="menu"] ul,
-    div[data-baseweb="menu"] ul > li {
+    .stSelectbox *[data-baseweb="menu"],
+    .stMultiselect *[data-baseweb="menu"],
+    .stSelectbox *[data-baseweb="popover"],
+    .stMultiselect *[data-baseweb="popover"],
+    *[data-baseweb="menu"],
+    *[data-baseweb="popover"],
+    *[data-baseweb="popover"] *[role="listbox"],
+    *[data-baseweb="menu"] ul,
+    *[data-baseweb="menu"] li {
         background: #101010 !important;
         border: 1px solid rgba(108, 3, 69, 0.4) !important;
         border-radius: 10px !important;
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45) !important;
     }
 
-    .stSelectbox div[data-baseweb="menu"] li[role="option"],
-    .stMultiselect div[data-baseweb="menu"] li[role="option"],
-    .stSelectbox div[data-baseweb="popover"] [role="option"],
-    .stMultiselect div[data-baseweb="popover"] [role="option"],
-    div[data-baseweb="menu"] li[role="option"],
-    div[data-baseweb="popover"] [role="option"] {
+    *[data-baseweb="popover"] > div {
+        background: #101010 !important;
+        border-radius: 10px !important;
+    }
+
+    *[data-baseweb="menu"] [role="option"],
+    *[data-baseweb="popover"] [role="option"],
+    *[data-baseweb="menu"] li,
+    *[data-baseweb="popover"] li {
         background: transparent !important;
         color: #f5f5f5 !important;
     }
 
-    .stSelectbox div[data-baseweb="menu"] li[role="option"][aria-selected="true"],
-    .stMultiselect div[data-baseweb="menu"] li[role="option"][aria-selected="true"],
-    .stSelectbox div[data-baseweb="menu"] li[role="option"]:hover,
-    .stMultiselect div[data-baseweb="menu"] li[role="option"]:hover,
-    .stSelectbox div[data-baseweb="popover"] [role="option"][aria-selected="true"],
-    .stMultiselect div[data-baseweb="popover"] [role="option"][aria-selected="true"],
-    div[data-baseweb="menu"] li[role="option"]:hover,
-    div[data-baseweb="menu"] li[role="option"][aria-selected="true"],
-    div[data-baseweb="popover"] [role="option"]:hover,
-    div[data-baseweb="popover"] [role="option"][aria-selected="true"] {
+    *[data-baseweb="menu"] [role="option"][aria-selected="true"],
+    *[data-baseweb="menu"] [role="option"]:hover,
+    *[data-baseweb="popover"] [role="option"][aria-selected="true"],
+    *[data-baseweb="popover"] [role="option"]:hover {
         background: rgba(108, 3, 69, 0.35) !important;
         color: #ffffff !important;
     }
