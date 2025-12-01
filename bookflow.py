@@ -8,12 +8,15 @@ import html
 import smtplib
 import ssl
 from email.message import EmailMessage
+from dotenv import load_dotenv
 
 from admin_portal import admin_dashboard
 from program_catalog import PROGRAM_CATEGORIES, all_programmes, programme_category
 from security_utils import ensure_password_fields, hash_password, verify_password
 
 # Page config
+load_dotenv()
+
 st.set_page_config(
     page_title="BookFlow - Library Management System",
     page_icon="📚",
